@@ -7,7 +7,7 @@ const connection = require("./database");
 const app = express();
 
 /* Settings */
-app.set("port", 3000);
+app.set("port", 8080);
 
 /* Middlewares */
 app.use(morgan("dev"));

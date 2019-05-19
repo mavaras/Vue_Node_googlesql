@@ -4,33 +4,23 @@ const mysql = require("mysql");
 
 let config = {
     //host: "104.197.131.49",
-    host: "35.241.174.226",
+    //host: "35.241.174.226",
     user: "myuser",
     database: "my_db",
     password: "suilluss",
 }
 
-// if (process.env.INSTANCE_CONNECTION_NAME && process.env.NODE_ENV === 'production') {
-//   config.socketPath = `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`;
+// let config = {
+//     user: process.env.SQL_USER,
+//     database: process.env.SQL_DATABASE,
+//     password: process.env.SQL_PASSWORD,
 // }
 
+if ("innovati-2:europe-west1:mydb" && process.env.NODE_ENV === 'production') {
+    config.socketPath = `/cloudsql/innovati-2:europe-west1:mydb`;
+}
+
+// let connection = mysql.createConnection(config);
+
 let connection = mysql.createConnection(config);
-
-// Database Connection for Development
-/*
-let connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASS
-});
-
-connection.connect(function(err) {
-    if (err) {
-        console.error('Error connecting: ' + err.stack);
-        return;
-    }
-    console.log('Connected as thread id: ' + connection.threadId);
-});*/
-
 module.exports = connection;

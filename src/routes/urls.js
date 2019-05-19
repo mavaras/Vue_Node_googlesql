@@ -13,7 +13,6 @@ router.get("/test", (req, res) => {
 router.post("/", async (req, res) => {
     console.log("post received");
 });
-
 router.post("/db/insert", (req, res) => {
     console.log("insert db");
 
