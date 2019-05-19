@@ -16,18 +16,6 @@ app.use(express.json());
 /* Routes */
 app.use("/urls", require("./routes/urls"));
 
-/*app.route("/db/:place").get(function(req, res, next) {
-    console.log("db");
-    connection.query(
-        "SELECT * FROM `test` WHERE place = ?", req.params.place,
-        function(error, results, fields) {
-            if (error) throw error;
-            res.json(results);
-            console.log(results[0]["date"]);
-        }
-    );
-});*/
-
 /* Static files */
 app.use(express.static(__dirname+"/public"));
 

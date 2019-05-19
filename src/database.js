@@ -3,7 +3,8 @@ const mysql = require("mysql");
 // Database Connection for Production
 
 let config = {
-    host: "104.197.131.49",
+    //host: "104.197.131.49",
+    host: "35.241.174.226",
     user: "myuser",
     database: "my_db",
     password: "suilluss",
