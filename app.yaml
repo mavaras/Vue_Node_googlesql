@@ -1,1 +1,3 @@
-
+runtime: nodejs10
+beta_settings:
+  cloud_sql_instances: innovati-2:europe-west1:mydb
