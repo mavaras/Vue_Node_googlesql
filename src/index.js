@@ -1,8 +1,8 @@
 require("dotenv");
 
 const express = require("express");
-const morgan = require("morgan");
-const bodyParser = require("body-parser");
+const morgan = require("morgan");  // show posts
+const bodyParser = require("body-parser");  // parse posts
 const connection = require("./database");
 const app = express();
 
@@ -21,5 +21,5 @@ app.use(express.static(__dirname+"/public"));
 
 /* Server */
 app.listen(app.get("port"), () => {
-    console.log("Server on port "+app.get("port"));
+    console.log("Server up on port "+app.get("port"));
 });

@@ -16,7 +16,6 @@ if (process.env.DB_INSTANCE && process.env.NODE_ENV === "production") {
 }
 
 let connection = mysql.createConnection(config);
-
 connection.connect((err) => {
     console.log("error connecting");
 });
