@@ -23,7 +23,8 @@ router.post("/db/insert", (req, res) => {
                                    +req.body["place"]+'", "'
                                    +req.body["phone"]+'")', req.params.place,
         function(error, results, fields) {
-            if (error) throw error;
+            console.log("error insert");
+            //if (error) throw error;
             res.json(results);
         }
     );

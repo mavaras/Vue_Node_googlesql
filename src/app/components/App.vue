@@ -96,15 +96,11 @@
 </div>
 </template>
 <script>
+    const Test = require("../../models/Test");
     export default {
         data() {
             return {
-                test: {
-                    date: '',
-                    time: '',
-                    place: '',
-                    phone: ''
-                }
+                test: new Test('','','','')
             }
         },
         methods: {
@@ -121,7 +117,10 @@
                     }
                 })
                 .then(res => res.json())
-                .then(data => console.log(data));
+                .then(data => console.log(data))
+                .catch(function(error) {
+                    alert("Error insertando en la base de datos Google SQL\nentrada duplicada");
+                });
             }
         }
     }

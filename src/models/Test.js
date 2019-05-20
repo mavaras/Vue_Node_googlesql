@@ -1,10 +1,14 @@
-/*const mongoose = require("mongoose");
-const {Schema} = mongoose;
+/*
 
-const Test = new Schema({
-    title: String,
-    description: String
-});
-
-module.exports = mongoose.model("Test", Test);
 */
+
+class Test {
+    constructor(date, time, place, phone) {
+        this.date = date;
+        this.time = time;
+        this.place = place;
+        this.phone = phone;
+    }
+}
+
+module.exports = Test;

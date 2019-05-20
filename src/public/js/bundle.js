@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n      test: {\n        date: '',\n        time: '',\n        place: '',\n        phone: ''\n      }\n    };\n  },\n\n  methods: {\n    add_test() {\n      console.log(this.test); // sending data to server\n\n      fetch('/urls/db/insert', {\n        method: 'POST',\n        body: JSON.stringify(this.test),\n        headers: {\n          'Accept': 'application/json',\n          'Content-type': 'application/json'\n        }\n      }).then(res => res.json()).then(data => console.log(data));\n    }\n\n  }\n});\n\n//# sourceURL=webpack:///./src/app/components/App.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nconst Test = __webpack_require__(/*! ../../models/Test */ \"./src/models/Test.js\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n      test: new Test('', '', '', '')\n    };\n  },\n\n  methods: {\n    add_test() {\n      console.log(this.test); // sending data to server\n\n      fetch('/urls/db/insert', {\n        method: 'POST',\n        body: JSON.stringify(this.test),\n        headers: {\n          'Accept': 'application/json',\n          'Content-type': 'application/json'\n        }\n      }).then(res => res.json()).then(data => console.log(data)).catch(function (error) {\n        alert(\"Error insertando en la base de datos Google SQL\\nentrada duplicada\");\n      });\n    }\n\n  }\n});\n\n//# sourceURL=webpack:///./src/app/components/App.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -223,6 +223,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App.vue */ \"./src/app/components/App.vue\");\n\n\nnew vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  render: h => h(_components_App_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n}).$mount(\"#app\");\n\n//# sourceURL=webpack:///./src/app/index.js?");
+
+/***/ }),
+
+/***/ "./src/models/Test.js":
+/*!****************************!*\
+  !*** ./src/models/Test.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("/*\r\n\r\n*/\nclass Test {\n  constructor(date, time, place, phone) {\n    this.date = date;\n    this.time = time;\n    this.place = place;\n    this.phone = phone;\n  }\n\n}\n\nmodule.exports = Test;\n\n//# sourceURL=webpack:///./src/models/Test.js?");
 
 /***/ })
 
